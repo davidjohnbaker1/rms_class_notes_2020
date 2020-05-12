@@ -1,0 +1,18 @@
+---
+title: "Tuesday Morning"
+author: "David John Baker"
+date: "12/05/2020"
+output: html_document
+---
+
+```{r}
+#install.packages("Hmisc")
+#install.packages("rms")
+```
+
+```{r}
+library(tidyverse)
+library(Hmisc)
+library(rms)
+```
+
