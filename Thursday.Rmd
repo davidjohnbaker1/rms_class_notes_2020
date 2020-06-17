@@ -1,0 +1,66 @@
+---
+title: "Thursday"
+author: "David John Baker"
+date: "14/05/2020"
+output: html_document
+---
+
+* It's hard to imagine any treatment that has a non-zero effect
+* Don't need data for non-zero effect
+* Bayes gives you way to play odds
+* Grabbing umbrella in morning is playing odds, not about conclude it will rain 
+* Can take an action on the basis of a probablity without making a conclusion with bayes 
+* Hypothesis testing has to go, never did what we wanted it to 
+* Low medium and high never good for anything (person with stopwatch, speedometer)
+* You'd pretend there is agreement if you thought there were cutoffs
+* Poker as probabilitic reasoning is way to go, gotta put money on the line 
+* Risk score assumes we don't have computers
+* Don't call it risk score, call it risk 
+* We want life expectancy calculators
+* If don't want life expectnacy, talk about time 
+* Whole risk score is less predictive
+
+* Using a model with admission of guilt is a good idea, better than not 
+* Worst of all words is a black box that doesnt perform well and uninterpreatble
+* Often you are mislead if logistic vs neural network 
+* Poor calibration overrides problem in c index 
+* Need to have calibration curve 
+
+* Prefered Nutshell
+* Decide how many df can be spent
+* Decide where to spend them 
+* Spend
+* Never recorder, especially if inference 
+
+* The Cost of Data Analysis -- horror story of data analysis
+* BBR notes has lots of stuff on propensity comparison 
+
+* g index instead of standard deviation 
+
+## The Bootstrap 
+
+* If not bayesian, should be using bootstrap like once a week
+* 1977/6 Effron for statistics 
+* If know population model with no distribution that generates data?
+fraction of observations less than or equal to current point?
+
+* ! See bootstrap in notes 
+Pretend population is empricical
+sampling from empricial is same as sampling with replacement to observed 
+
+* Read [62] on bootstrapp confidence intervals and which one to choose 
+* FH says bootsrap variale for model vlidation, not bootstrap 
+
+* Bootsrap estimates bias 
+* estimating optimism, bias due to overfiitting
+
+* BBR talks about what it means to validate a model 
+* Interal validation can tell you it doesnt work much faster
+
+* Gotta validate people, not models?
+* Potti scandel at Duke
+* DV reversed
+* Columns off
+
+## Parameter Estimation
+

@@ -1,0 +1,70 @@
+---
+title: "Friday"
+author: "David John Baker"
+date: "15/05/2020"
+output: html_document
+---
+
+* Make it non-linear if you know it's not linear ?
+* we want constant scale so less interactions 
+* odds can be constant 
+* risk differences cant be constant
+* Also makes false interactions 
+
+* If no difference between groups on DV can reverse it????? 
+*
+
+Myth of table 1 on datamethods
+Don't look at balance in clincial trials 
+avoid propensity scores in diseas
+Stephen Senn (ajdusted for something that has been created to be covariate)
+
+* Need to avoid subgroups in longitiduinal 
+
+## Sample Size for Logistic Regression
+
+You should be able to do the simples thing and just estimate the prevelance of an event.
+What is the probabiliy of Y = 1.
+Sample size for a single proportion is 96
+BBR notes is minimal size so CI for proportion is no bigger than .1 
+.4 to .6 CI and no wider 
+
+Estimating single proprotion is same as intercept in logistic model 
+
+With 47 cancer patient model, can't even estimate the intercept.
+
+If you restrick probability to be more extreme and not half, can get by but relative errors bigger 
+
+If probabilities are not in middle, can get by with fewer subjects
+
+* Concordance and ondordance probability as helper 
+* ROC won't help if get better lower AUC
+
+* SIMULATION IN BBR NOTES AND PROPORTION DIRECTLY AND PERCET GOES DOWN
+
+* Need to make sure you have the correct score for classificaition
+
+
+GIVE ME ADVICE
+  At point in life where kind of weird
+  I know I want to do research 
+  get a lot bigger at stats
+  get a lot better at coding 
+  
+* BBR notes will show basyian t-test with posterior on normality 
+
+WTF is a chunk test 
+
+nhanes data for data ??? 
+
+Kaplemeyer curve
+Cox model 
+
+Can't subtract in ordinal scales
+
+Can use ordinal regression for zero inflated 
+
+
+  
+  
+  

@@ -1,0 +1,237 @@
+---
+title: "Wednesday"
+author: "David John Baker"
+date: "13/05/2020"
+output: html_document
+---
+
+
+# Morning 
+
+* Just call it risk and get predicted probability, don't talk about scores
+* Predictions can use multiple continous varibles with no problems whatsover 
+* Spline is more flexible than the log 
+* One form of interaction is a decay 
+* Variables that are right tail heavy, take cube root
+
+* Frequentist nature doesn't have great way for ordinal variables 
+* brms will take care of categorical predictors that is ordinal 
+* raw variables can be bimodal and nothing wrong
+* Could be just that need to be conditional 
+* Really just need to look at the residuals for normality 
+
+## Missing Data 
+
+* If have a dataset with no missing data, should think something is wrong 
+* Donald Reuben: made types of missing data
+* MAR - have an explanation for all the things that make things systematically missing 
+* many good review articles on missing at data 
+* Best resource, steph van beuren (multiple imputation? great book on it)
+
+* Quantify extent of missing variable, types of subjects with missing, sets of varible on same subject 
+* Need to say who was not there! Sickest patients? one group?
+
+* Bad Ideas
+* Casewise deletion is a very bad idea 
+* Badly biases parameter estimates 
+* Default approach on software, so gets done most 
+* always really hate to lower sample size 
+* von Hippel 201 for good general suggestions
+* NYTimes most people dont give free survey
+* way to get 100% response rate?
+* If had choice of internet survey of 100 questions and got 80% vs 
+* non response bias is out of control and understood 
+* Need to even know who was sent 
+* Randomizing which questions to ask is way of the future
+* Planned non-response?
+* Randomize order that questions are asked
+* Patients give utility assement for traumatic brain injury 
+* Veg state is rated worse than death when order randomized 
+* Put question order in and order on question makes for order effect 
+
+* Making up missing data is better than thowing away real data
+* imputation does not gain what you lost
+* Imputation makes you hold what you have already measured !!
+
+* Everyone learns statistics the hard way 
+
+* Whatever you do, don't change the definition of a varible
+* If have four level variable, never want five level
+* Only time this is OK when have N/A in a survey (male, female)
+
+* Donder et al 57 gives good example of when you can just put in any variable 
+* way that you impute needs to respect your data
+* If you have mean and indicator for missing, but doesnt respect second order property of data (covariate structure)
+* Imputed data will not have correlation structure accouted for 
+* DO MULTIPLE IMPUTATION
+* Goal of imputation is preserve the meaning of data you do have
+* This is strategy 
+
+* Full bayesian modeling is way to do missing values 
+* more difficult to do [65] but good 
+* Multiple imputation is way to mirror bayes
+
+* MI is educated guess
+* Like give zip code for income 
+* we predict the sometimes missing X
+* Imputation model needs to be as big or at least as big as response model 
+* If you ignore fact you imputed, your standard errors will be too low 
+* 1:4 will show how to do transcan and argeImpute for fitting mimptuation models  
+
+* Bootstrap, gotta learn more about it
+
+* Predictive mean matching is the favorite 
+* Not assumption a lot of
+* Replace observed value of a subjcet having closed prediced value to the predictev alue of the subject with NA 
+* Possibly exact matching on categorical? 
+* Don't have to match on all covariates for continious, just based on predicted value 
+* Read more 128 for predctive mean matching 
+
+* With interactions, supposed to impute the actual imputed term
+* Will even get imputed products that cant happen 
+* But if you average over big number, btter eventually?
+
+* SMI 79 for splines
+* Sample size estimates papers
+
+* SIMEX for measurement error in covariates 
+* Simulation extrapoloation
+* Take covariate, then add more error and more error and keep estimating regef
+* Then can extrapolate if there was no error in covariate 
+
+* There is a way to check if you are able to [220] check by removing data 
+
+* reason missing is way more important than number missing 
+
+* muliple imputation works better the more missing data you have
+* If you DON'T use MI, you can delete variable or observations, both worse than MI 
+
+* LOVE that the vibe of the course is just making it so that people in attendance don't make same mistake he did 
+
+## Multivarite Modeling Strategies
+
+* Spending DFs are spending opertunities 
+* Those oppertunities have big impact on what happens 
+* If you have to work really hard to come up wiht a model, might make predictions worse.
+* We want to make use of the outcome variable
+
+* Can be easily mislead with unsuprervised in that you help or hurt in unbiased way 
+* You wont systematically oversate waht you find later
+* If you did PCA, components might not reproduce, but still predict in same way 
+
+* Might just be that trying to make it parsimonious, but Nature doesn't
+* Parsionmony is enemoy of prediction 
+* In trying to be parsimonious, end up
+* Data are not consistant with a parsimoious set up 
+* Easier get result than answer
+* Order of magnitude to get rid of bullshit 
+
+### Lunch
+
+* Linearity is an accident, shouldn't expect it 
+* Idea is to allow flexible non-linearity for strong predictory
+
+* Make promise: once in model, always in model 
+* Is it one parameter? or more than one parameter?
+* Assign complexity to varibles that are more likely to impact withotu biasing
+
+* Not willing to make steep relationshiop underfit 
+
+* You can give most number of knots to lowers (sulfer) on blog post
+* And then put the linear for the stuff like citric 
+
+* In general, better to specificy rather than select 
+
+* can always move from simple to complex because that model is self penalizing 
+* if you go to simple model, it will ruin the standard models 
+* Important to know different between forward and backward complexity 
+* Important to get phrase self penalizing
+
+* Ridge regression with 10K predictors migth be best to do in that situation 
+* With elastic net, gives equal probablity to lasso and ridge (defeats the purpose)
+*
+
+Variable Selection
+
+If variable selection was invented now, would be invented now
+First software in stats was BMDP (UCLA, 1963) and had stepwise regression
+There was no computer avalible to run simulations.
+1982 you get unix workstations
+Was shocking at time how pooer methods work.
+20 year gap between first software implementation and simulations.
+This meant htat stepwise was established as a thing.
+
+36 summary of problem !!!
+This is reporting
+If only report things significant, goign to be away from zero
+What is effect?
+R2 is too much, B^ too far from zero, standad errors too big, p values to small
+F and chi square do not have claimed distribution on simulation 
+
+If want to show if good, find what people think its best at.
+Stepwise regression is SUPPOSED to be good at what its supposed to be best at 
+Derksen and Keselman 54 finds it cant do what it supposed to do 
+It doesnt workw hat you think its supposed to be good at
+Hurt by number of bariable
+and collinaryt
+and it doesnt get better if you increase sample size
+
+Why do variable selection?
+If you do global test and get df insignificant, stop 
+
+1. show correlation matrix with giant
+2. how often with different sample sizes do you have right model? 
+
+APS, it's actually worse. 
+
+There is disengenousness to get somethign named 
+
+* Probably good to re-read on factorial designs 
+
+* THink a bit more about the demon and the box analogy with james clerk maxwell 
+* you gain no predictive accuacy trying select variables 
+
+* If make assertion, need to have skin in the game when it goes wrong 
+* Should have to pay a price if you're wrong
+
+* Need to try to find a proof of concept that shows there is something in the data
+* THen need the experiment to narrow it down 
+
+Suggestions
+
+P should be < m/15 (90:192)
+
+Simulate at high N, then reduce until R2 breaks down 
+NO matter how weak model, no weaker than we claimit is 
+
+You need basic sample size to just even estimate the intercept.
+
+Riley et al 160 161
+
+?? what about variable importance plots (like idea normally associated with random forrest, )
+
+* Collinearity is not as big of a problem as something else we talk about
+* competition among the variables 
+* does not affect the joint influence of a set of highly correlated varaibles 
+* high collinarity does not affect predictions??
+* Variable clustering is good way to explore colinarity !!
+* Also PCA
+
+Data reduction 
+
+* Eliminate too narrow distribution
+* Big fan of sparse PCA (book has example !!)
+
+Variable Clustring
+  4.7.2
+
+Simplest way to compare models is just look at difference in the predictive models 
+
+greenland [84] - shows how stepwise variable selection messes things up.
+Shrinkage is better than superior selection
+Variable selection more about CI
+
+We shouldn't be afraid of modelign complex things
+
+robust in linear for hierarchical , not logistic 
+

@@ -16,3 +16,320 @@ library(Hmisc)
 library(rms)
 ```
 
+## Hour One 
+
+* 140 signed up
+* Many people from the FDA 
+* If felt bad about mistakes in past, just know learn
+* If you think work, write a simulation 
+* What taught in graduate school, didn't work in simulation 
+* Build in procedures to discover our mistakes 
+
+* Don't be afraid of making mistakes, find ways of making progress
+* We all make mistake
+* Goal is not to have perfect model like a physicisit 
+* Goal is to advance the field and guiding principle should be don't make a model that people can improve upon in their sleep 
+
+* Random effects work well in linear models
+* Random effects logistic can be non-robust 
+* Marginal Models? 
+
+* Course Philosphy 
+* If you don't have set of principles, won't know when you violate 
+* Models are the best descriptive statistics 
+* Data only reflects reality, has sample size issues
+* More assumptins you have, better predictions you have
+
+* Number one reason not replication is sample size, then too much playing to get a result 
+* If paper says SAS or SPSS that will only find linear relationships in analysis 
+* If software doesnt make it easy to do things right, limits you 
+* We're SURPRISED if things are linear (unless in newtonian physics) most things in nature are not 
+* Methodology should and does transport about this 
+* Point should not be use statistical methods to understand task
+* Don't make \$1,000,000 study worthless with $100 analysis just so clinician can get it
+* Very unethical, implies contributing to science
+* Only reason to not use bootstrap if Bayesian
+* Bayes is now ready for prime time 
+* Once you penalise youre screwed in frequentist, not same in Bayesian !!
+
+* BBR notes w t-test, can allow for non-normality 
+* Gives assumption about the probability of the data 
+* QUESTION: Penaliztion:discount what you observe. 
+* If had 100 predictor variables, biggest beta is overstated 
+* Penalisation intercepts regression to the mean
+* Penalisation is aimed at prediction, not inference 
+* Penalisation in bayesian for inference 
+
+* `A good overal strategy is to decide how many degrees of freedom can be psent, where to spent them, to spend them with no regrets
+
+## Hour Two 
+
+* Hypothesis testing has hurt science to immesurably degree
+* Only good if you need to show if something EXISTS (ESP, some sort of Particle)
+* If it just has to be better than chance, then hypotheis testing
+* This doesn't go with rest of what we do which is estimation and prediction 
+
+* When testing null hypotheisis(t test, permutation, cox)
+* Doesnt extend to situations we need?
+* ANOVA is great for partitoining sums of squares (pays off later)
+* Using ANOVA for statistical test is not called for when have general modelign approach
+* Models open the door for somewhat more
+* log rank test is special case of cox proportional hazard
+* WTF if Cox model?>
+* log-rank test shouldn't exist
+* Once you know cox, you know everything you need (don't need log-rank test, whatever that means)
+* Multiplicity needs to be adjusted in POINT estimates 
+* with model, can make sub groups random effects ??
+* Hazard ratio from arbirary cutoffs have no known interpretations
+* ONLY way to check this is to get two prediction values, subtract antilog
+* Type I assertion probability (multiplicity)
+* Asserting something is not an error 
+* FPR is unrelated to Type I? 
+
+* Can't remove statistics part from modeling
+* When you calculate a MARGINAL effect, won't tranlate to other samples
+* If you adjust for age, that estimate will transport
+
+* It's hard to define what a population means 
+
+* With COVID19, epidemic of modeling 
+* Public does not need to be given unreliable methods
+* Beyond prediction, use a model to see previously developed summary index summerises component variables
+* Role model for statistics should be sherlock holmes 
+* Sherlock was great at looking at alternate explanation for things
+* BMI for example hides the issue
+* What predicts size of coronary issues, it's your HEIGHT not your weight
+* Need to use modeling to show that
+* WOULD LOVE DATASET TO SEE THIS FOR BMI AND LOG HEIGHT WEIGHT 
+
+* Primary analysis should never be unadjusted with non-lienar model
+* Odds ratio is actually comparing age on treatment 
+* Doesn't make sense for unadjusted, ethical issues
+* Have more patients just to have simpler analysis 
+
+* Statistics for Medical Research Course: Why need a model 
+* We should all be bayesians 
+* We have taught generations of people to think indirectly 
+* Made people pretend that p value gives answer you want 
+* All indirect
+* JUST want to konw if the treatment works
+
+* Classification vs Prediction Blog Artilce of F Harrell
+* READ This Article 
+* Probabilistic Thinking (READ THE PAPER IN HERE)
+* Classificaiton were first tools to set up to do that
+* But doesn't help with problems that we have 
+* You need classification when you're in hurry or have loss function that is trivial 
+* EG is something a v or a w
+* Might not think as much about probability .97 of v
+* Loss function might not care
+* When NOT in situation like that, classificaiton represents a premature choice 
+* This is at worst in medical literature as dead or alive 
+* We want to say its risk factors or tending to die 
+* Appropriate is analysis of TENDICNECES rather than prediction 
+* Story: Kaggle IBM watson sucked at Titanic, goign to suck at other things
+* Short answer is when you want to make classifcation where odds is 1 or 0
+* Worst of all worlds is using classifcaiton on originally continous variable
+* in 69, when dichotimize, sample size is up by 5 
+* Classification uses utility function, which is one chosen by analyst 
+* Cost of a false positive needs to come from PATEIENT 
+* Don't have to make a classification to make an action
+
+##
+
+* Introduction to bayes for evaulating treatements: reading
+* It's a big document that tries to cover a lot of ground w case studies and simulations 
+* [Check this out here](https://hbiostat.org/doc/bayes/course.html#12_more_information)
+* At end of document above there are references and more information here with interactive demon
+* Also basics of probability here
+* Hidden Problems
+* What is a utility function????
+* ROC is misleading EXCEPT when have a group choice (for populatoin)
+* ROC only for populations 
+* SEE 198,27, 73, 23, 66,77
+* You calculate probabilty given some biomarker is > certain value
+* Patient doesnt care about more extreme than me, cares about me
+* c-statistic intution is good as descriptive tool
+* Area under ROC curve doesnt have same problem
+* Area under ROC is wilcoxen statistic ??? 
+* ROC will not be good for comparing two models
+* And it doesnt give right reward for two models that are correct
+
+* Many doctors know that you can start with small does and go higher
+* Need to have probabilitic thinking, use risk models 
+* Don't need dichotomize on speedometer, why on others? 
+* In medical diagnosis research, very bad methods
+* First use of ROC was virology outside of Radar and Radio
+* Useful to show that you have virus for cultring
+* THEN got used in inappropriate way 
+
+* Need to make sure that you get severity of principle diagnosis
+* Really ask for trouble if this is the case 
+* Number five is one of most important things to deal with. 
+
+* General aspects
+* Just get a baseline of outcome variable, usually most predictive
+* Lung function, makes sure to get before asthma treatment
+* If you don't get continous variables, gotta get more variable to make up for that 
+
+* Unsupervised learning as better option for variable selectoin
+* find c-index???? 
+
+* If you entertain multiple models, ESP by variable selection of R2 things will be unstable 
+* GDF: generalised degrees of freedom 
+* If you add +/2 to your DV can see how good data is
+* GDF will show that it has five, but really has 14.1 for GDF (see 218)
+* The model as a VOLITLITY of 76 degrees of freedom 
+* GDF also as phantom degrees of freedom
+
+
+## General Aspects of Fitting Regression Models 
+
+* What needs is regression fulfilling?
+* What makes regression tick is additivity assumption 
+* In variety of problems, things are additive 
+* Lung capacity (smoking, age)
+* When not too many interactions, regression is better
+* Machine Learning assumes interaction effects just as effective as main effects
+* Regression can separate the effects of variables
+* Can alos be used for hypohteis stestin and understanding undertatingy
+* for example, can get confidence intervals for slopes 
+
+* Alternative to regression is stratificaiton
+* Trees are interpretable ONLY because they are wrong and oversimplified (haha)
+* Trees can't separate out each main effect
+* Trees find spurious interactions 
+* Majority of cases where you think you find interaction, its suprriosu with three
+* If you have wide and narrow distribution for age in males and females, will see it differently
+* More than 20x greater for CART (100,000 or higher)
+* Tree is SO unstable 
+* If tree is unstable, insights from regression tree unstable 
+* This above is all for SINGLE tree methods
+
+* ML methods are not nessecarily trees ??
+* Sometimes can't get enough data to use something as flexible for a tree
+* One paper for RF suggests you need 100 events per variable (FIND THIS)
+* If doing complicated problem with 50 patients, can't estimate anything that tells enough
+* Can't even estimate what proportion are male, math impossible to get any predictive model or its performance
+* If can't do something within a N=50, can't be more complicated 
+
+* Everyting is sort of an interaction with machine learning
+* Machine learning has created the NEED for big data
+* READ Harvard Bsuiness Review (after convert to ML, quality of work went down)
+* Sucess of ML is in high signal to noise ratio situations
+
+* ML and Regression are different
+* Statistical models favor additivity 
+
+## Notation
+
+* Model is connection between predictors and response
+* Connection we use is long term expected value. 
+* If you linearize, you can isolate regression coefs and then interpret them 
+* Regression is easier to manage sample size constraints
+* Works with better sample size 
+
+* Transfomratoins are about isolation effects of coefs
+* Need to be careful with interactions bc could have to do with standard deviations and require different transformations 
+* In more complicated istuations we see interaction with the model 
+* Some things you want to have in model are futile
+* If you have age and cig smoking, might be interaction, but they are correlated
+* Sometimes need to make choice based on orthogonality, not domain? 
+* In factorial design, 2x2 are supposed to be orthogonal so get best chance at interaction 
+* The more orthogonal your variables are, the better for finding interactions 
+
+## Relaxing linearity
+
+* When categorizign variable, assuming there is a jump in nature
+* You assume relationship is flat inside each category
+* End up having more parameters with categorical 
+* No way to justify dichotimizing continous varible like age
+* Interpreation of odds ratio depends on distribution of subgroups if categogrical
+* Optimal cutpoints do not track over studies
+* Huge correlation between median and cutpoint (for equal sample size)
+* Gaming of system and have NOTHING to do with biology
+* Recreate plot with hemoglobin 
+
+* Quadratic is symetrical around the inflection point
+* Sometimes have distribution that is so skewed, cubes blow up, then can transform an x
+* Just matters if Y is normally distributed 
+
+Locaions not important 180?!?!
+* Equally spaced in terms of sample size
+* More data, more knots
+
+* Interactions often suprious because
+* number of subjects needed for one interaction is 4x that
+* tree will split on age in male female with different bins 
+
+### New Directions in Predictive Modeling
+
+* Fit fully pre-specififed models with out deletion of insignificant predictors
+* Data reduction is often better than penalisation (PCA gives more stable model)
+* LASSO is so unstable, often get different features with different variables 
+
+* Two stage approach, data reduction and modeling fitting
+* Need to make choices in reduction, then live with choices later in model fitting
+* lasso and elastic net penalise 
+* ridge is better than lasso or elastic net
+* 144, 143. Make super predictive 
+
+* Sparse principal coments is thing he wants more of [214, 223, 123, 122] !!!!
+* When using lasso, elastic net, customary to standardise
+* If xs are aysmetic distributed, probably not good idea
+
+* PCA and interactions??? 
+
+### ML and S Modeling
+
+* Radiology and Pathology - great for ML
+* Cancer prediction, ML not as good because very noisy situation
+* Some people think you can do ML on small samples 
+* If sample is not big enough for one feature, not going to work with tons of candidate feature
+
+* Statistical model if have inherent uncertaintiy 
+* We're modeling probabilities
+
+* If signal to noise ratio is infinite, go/chess, then ML 
+* There is no debate with who wins 
+* Signals are so hidden in cancer situations
+* Can't have perfect data unless playing a game
+* Models are helpful for other reasons here 
+
+* Drew blog on Fharrel.com 
+* Signal to noise ratio is key to understand 
+* ML lacking replication 
+
+* Sample size for clinical trial is often not big enough to answer 
+* Simulations are probably using signal to noise ratios we dont see in clincial databases
+* Only research that has meta analyzed hetregeneity of treatment
+* BOTH show that there is reverse heterogenity in them 
+
+* TWO papers by Reiley gives idea of sample size 
+* data hungry, steyerberg
+* 20 events with regression, way more for others 
+
+## Multiple Degree of Freedom Tests of Association 
+
+* Granbsh and Obrian
+* More simulations you run, more likely to test out ideas 
+* Often find quickly if there is a problem 
+* Cross valitation and bootstrap tell you if you have a problem 
+* Tell you the harm and not the fix 
+
+* Model selection is not good idea compared to model specification up front
+
+* Positive validation problem with varialbe hold out
+* Just because you show positive is good doesn't mean show others not in should be left out
+
+* Interactions will be misleading if main effects are not properly modeled 222
+
+* Avaliblitiy of data and questions often combined
+* Need a lot more purposefullyness in work
+
+* Only put in what makes sense for interaction
+* Interaction should not be interaction
+* Can have skeptical priors for interactions 
+
+* datamethods.org ?? 
+
